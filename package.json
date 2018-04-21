@@ -1,0 +1,28 @@
+{
+  "name": "threadbot",
+  "version": "0.0.1",
+  "description": "Thread Bot for Slack",
+  "main": "index.js",
+  "author": "Bruno Lemos",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunolemos/threadbot.git"
+  },
+  "keywords": [
+    "thread",
+    "bot",
+    "slack"
+  ],
+  "bugs": {
+    "url": "https://github.com/brunolemos/threadbot/issues"
+  },
+  "homepage": "https://github.com/brunolemos/threadbot#readme",
+  "scripts": {
+    "start": "micro",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "micro": "latest"
+  }
+}

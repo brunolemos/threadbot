@@ -1,0 +1,12 @@
+{
+  "name": "threadbot",
+  "alias": "slack-threadbot.now.sh",
+  "dotenv": true,
+  "public": true,
+  "scale": {
+    "sfo1": {
+      "min": 1,
+      "max": "auto"
+    }
+  }
+}

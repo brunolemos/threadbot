@@ -36,6 +36,7 @@
     "watch-ts": "tsc -w"
   },
   "dependencies": {
+    "@slack/client": "^4.3.1",
     "micro": "^9.3.2"
   },
   "devDependencies": {

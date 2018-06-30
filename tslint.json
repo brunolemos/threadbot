@@ -14,7 +14,7 @@
     "jsx-boolean-value": false,
     "jsx-no-multiline-js": false,
     "member-access": false,
-    "no-console": [true, "debug", "dir", "log", "trace", "warn"],
+    "no-console": false,
     "no-empty-interface": false,
     "object-literal-sort-keys": [true, "shorthand-first"],
     "object-shorthand-properties-first": false,

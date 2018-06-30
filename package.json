@@ -22,6 +22,8 @@
     "build": "npm run build-ts && npm run tslint",
     "build-ts": "tsc",
     "debug": "npm run build && npm run watch-debug",
+    "format": "prettier --write '{.,src/**}/*.{js,ts}'",
+    "precommit": "lint-staged",
     "serve": "micro dist/index.js",
     "serve-debug": "nodemon --exec micro --inspect dist/index.js",
     "start": "npm run serve",
@@ -40,12 +42,24 @@
     "@types/jest": "^23.1.3",
     "@types/node": "^10.5.1",
     "concurrently": "^3.6.0",
+    "husky": "^0.14.3",
     "jest": "^23.2.0",
+    "lint-staged": "^7.2.0",
     "nodemon": "^1.17.5",
+    "prettier": "^1.13.7",
     "ts-jest": "^22.4.6",
     "ts-node": "^7.0.0",
     "tslint": "^5.10.0",
     "tslint-config-airbnb": "^5.9.2",
+    "tslint-config-prettier": "^1.13.0",
     "typescript": "^2.9.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "tslint --fix",
+      "tsc --allowJs --allowSyntheticDefaultImports --experimentalDecorators --emitDecoratorMetadata --lib dom,es2017 --jsx react-native --noEmit --skipLibCheck --strict --typeRoots @types,../../@types",
+      "git add"
+    ]
   }
 }

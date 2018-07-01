@@ -4,6 +4,7 @@ import { get } from 'microrouter'
 
 import { slackClientId, slackClientSecret } from '../init/rtm'
 import web from '../init/web'
+import Team from '../models/team'
 
 export default [
   get('/oauth', async (req, res) => {
@@ -34,16 +35,34 @@ export default [
     }
 
     const {
-      // access_token,
+      access_token,
+      bot: { bot_user_id, bot_access_token },
       scope,
-      user_id,
-      team_name,
       team_id,
-      bot: { bot_user_id /* bot_access_token */ },
-      scopes,
+      team_name,
+      user_id,
     } = (response || {}) as WebAPICallResult & Record<string, any>
 
-    send(res, 200, { ok: true, bot_user_id, scope, scopes, team_id, team_name, user_id })
+    try {
+      await Team.findByIdAndUpdate(
+        team_id,
+        {
+          access_token,
+          scope,
+          $addToSet: { users: user_id },
+          _id: team_id,
+          bot: { _id: bot_user_id, access_token: bot_access_token },
+          name: team_name,
+        },
+        { upsert: true },
+      )
+    } catch (error) {
+      console.error(error)
+      send(res, 500, { ok: false, message: error.message })
+      return
+    }
+
+    send(res, 200, { ok: true, bot_user_id, scope, team_id, team_name, user_id })
 
     // res.setHeader(
     //   'Location',

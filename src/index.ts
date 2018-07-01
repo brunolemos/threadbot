@@ -1,24 +1,11 @@
+import { WebAPICallResult } from '@slack/client'
 import { send } from 'micro'
 import { get, router } from 'microrouter'
 
-import { RTMClient, WebAPICallResult, WebClient } from '@slack/client'
+import rtm, { slackClientId, slackClientSecret } from './init/rtm'
+import web from './init/web'
 
-const clientId = process.env.SLACK_CLIENT_ID!
-const clientSecret = process.env.SLACK_CLIENT_SECRET!
-const token = process.env.SLACK_TOKEN!
-
-if (!clientId) throw new Error('[ENV] Missing environment variable: SLACK_CLIENT_ID')
-if (!clientSecret) throw new Error('[ENV] Missing environment variable: SLACK_CLIENT_SECRET')
-if (!token) throw new Error('[ENV] Missing environment variable: SLACK_TOKEN')
-
-const rtm = new RTMClient(token)
-const web = new WebClient()
-
-rtm.start()
-
-rtm.on('user_typing', ({ channel }) => {
-  rtm.sendTyping(channel)
-})
+import './features/typing'
 
 export default router(
   get('/', (_req, res) => send(res, 200, { ok: `${rtm.connected}` })),
@@ -40,8 +27,8 @@ export default router(
     try {
       response = await web.oauth.access({
         code,
-        client_id: clientId,
-        client_secret: clientSecret,
+        client_id: slackClientId,
+        client_secret: slackClientSecret,
       })
       if (!(response && response.ok)) throw new Error('Invalid response')
     } catch (error) {

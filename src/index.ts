@@ -10,4 +10,5 @@ export default router(
   ...require('./routes/actions').default,
   ...require('./routes/commands').default,
   ...require('./routes/oauth').default,
+  ...require('./routes/ping').default,
 )

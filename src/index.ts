@@ -6,5 +6,6 @@ import './features/typing'
 export default router(
   ...require('./routes/index').default,
   ...require('./routes/actions').default,
+  ...require('./routes/commands').default,
   ...require('./routes/oauth').default,
 )

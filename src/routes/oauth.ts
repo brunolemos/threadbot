@@ -63,12 +63,12 @@ export default [
       return
     }
 
-    send(res, 200, { ok: true, bot_user_id, scope, team_id, team_name, user_id })
+    // send(res, 200, { ok: true, bot_user_id, scope, team_id, team_name, user_id })
 
-    // res.setHeader(
-    //   'Location',
-    //   `https://slack.com/app_redirect?channel=general${team_id ? `&team=${team_id}` : ''}`,
-    // )
-    // send(res, 302)
+    res.setHeader(
+      'Location',
+      `https://slack.com/app_redirect?channel=general${team_id ? `&team=${team_id}` : ''}`,
+    )
+    send(res, 302)
   }),
 ]

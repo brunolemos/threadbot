@@ -17,15 +17,15 @@ so the person remembers to use thread instead of flooding the channel.<br/>
 Start a new thread
 -->
 
-### `/thread-reminder`
+#### `/thread-reminder`
 Remind everyone to always use thread when possible
 
 <img height="50" src="https://user-images.githubusercontent.com/619186/42146315-64c80366-7d9d-11e8-8114-231a85da6229.png"/>
 
 
-### Action buttons
+#### Action buttons
 
-#### Ask to use thread
+##### Ask to use thread
 
 <img height="150" src="https://user-images.githubusercontent.com/619186/42146178-8fad463c-7d9c-11e8-8e30-470baeb2c1a4.png"/>
 
@@ -33,7 +33,11 @@ Remind everyone to always use thread when possible
 
 
 
-### ~Unshare files~
+#### ~Unshare files~
 ~Automatically unshare files from channels so comments don't flood the channel~<br/>
   - _Slack API doesn't allow bots do this 😕_
   - _This will soon be fixed: File comments will work just like threads after July 19th 🎉🎉 ([source](https://api.slack.com/changelog/2018-05-file-threads-soon-tread))_
+
+### TODO
+
+- [ ] Automatically detect when too many messages as shared in a short time and trigger the thread reminder

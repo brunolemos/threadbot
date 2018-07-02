@@ -2,8 +2,7 @@ import { WebAPICallResult } from '@slack/client'
 import { send } from 'micro'
 import { get } from 'microrouter'
 
-import { slackClientId, slackClientSecret } from '../init/rtm'
-import web from '../init/web'
+import web, { slackClientId, slackClientSecret } from '../init/web'
 import Team from '../models/team'
 
 export default [

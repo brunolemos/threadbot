@@ -13,9 +13,13 @@ so the person remembers to use thread instead of flooding the channel.<br/>
 ![image](https://user-images.githubusercontent.com/619186/42146134-3c67cd30-7d9c-11e8-9586-05d2c91f0e91.png)
 
 ### Action buttons
-- Kindly ask a user to use thread
+
+#### Ask to use thread
 
 ![image](https://user-images.githubusercontent.com/619186/42146178-8fad463c-7d9c-11e8-8e30-470baeb2c1a4.png)
+
+![image](https://user-images.githubusercontent.com/619186/42146263-17201748-7d9d-11e8-8dd6-ff0621fc72c8.png)
+
 
 <!--
 ### `/thread` command

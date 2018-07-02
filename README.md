@@ -10,16 +10,7 @@ Make people on Slack use threads instead of flooding the channels
 #### Thread Bot is typing
 Show `Thread Bot is typing` whenever someone types,<br/>
 so the person remembers to use thread instead of flooding the channel.<br/>
-![image](https://user-images.githubusercontent.com/619186/42146134-3c67cd30-7d9c-11e8-9586-05d2c91f0e91.png)
-
-### Action buttons
-
-#### Ask to use thread
-
-![image](https://user-images.githubusercontent.com/619186/42146178-8fad463c-7d9c-11e8-8e30-470baeb2c1a4.png)
-
-![image](https://user-images.githubusercontent.com/619186/42146263-17201748-7d9d-11e8-8dd6-ff0621fc72c8.png)
-
+<img height="100" src="https://user-images.githubusercontent.com/619186/42146134-3c67cd30-7d9c-11e8-9586-05d2c91f0e91.png" />
 
 <!--
 ### `/thread` command
@@ -28,6 +19,19 @@ Start a new thread
 
 ### `/thread-reminder`
 Remind everyone to always user thread when possible
+
+<img height="50" src="https://user-images.githubusercontent.com/619186/42146315-64c80366-7d9d-11e8-8114-231a85da6229.png"/>
+
+
+### Action buttons
+
+#### Ask to use thread
+
+<img height="150" src="https://user-images.githubusercontent.com/619186/42146178-8fad463c-7d9c-11e8-8e30-470baeb2c1a4.png"/>
+
+<img height="300" src="https://user-images.githubusercontent.com/619186/42146263-17201748-7d9d-11e8-8dd6-ff0621fc72c8.png"/>
+
+
 
 ### ~Unshare files~
 ~Automatically unshare files from channels so comments don't flood the channel~<br/>

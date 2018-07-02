@@ -18,7 +18,7 @@ Start a new thread
 -->
 
 ### `/thread-reminder`
-Remind everyone to always user thread when possible
+Remind everyone to always use thread when possible
 
 <img height="50" src="https://user-images.githubusercontent.com/619186/42146315-64c80366-7d9d-11e8-8114-231a85da6229.png"/>
 

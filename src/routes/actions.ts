@@ -19,4 +19,16 @@ export default [
 
     send(res, 200)
   }),
+  post('/actions/start-thread', async (req, res) => {
+    const body = await getParsedBody(req, res)
+    const payload = JSON.parse(body.payload)
+
+    await axios.post(payload.response_url, {
+      response_type: 'in_channel',
+      text: '[THREAD] ⬇️',
+      thread_ts: payload.message.ts,
+    })
+
+    send(res, 200)
+  }),
 ]

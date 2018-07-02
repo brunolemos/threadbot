@@ -1,6 +1,8 @@
 import { router } from 'microrouter'
 
-import './features/typing'
+import { initAllFeatures } from './init/features'
+
+initAllFeatures()
 
 /* tslint:disable no-var-requires */
 export default router(

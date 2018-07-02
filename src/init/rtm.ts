@@ -1,12 +1,18 @@
 import { RTMClient } from '@slack/client'
 
-export const slackToken = process.env.SLACK_TOKEN!
-if (!slackToken) console.debug('[ENV] Missing environment variable: SLACK_TOKEN')
+import { Team } from '../models/team'
 
-let appRTM: RTMClient | undefined
-if (slackToken) {
-  appRTM = new RTMClient(slackToken)
-  appRTM.start()
+const _rtmByTeam = new Map<string, RTMClient>()
+
+export function getRTMForTeam(teamId: string) {
+  return _rtmByTeam.get(teamId)
 }
 
-export default appRTM
+export function startRTMForTeam(team: Team) {
+  if (!getRTMForTeam(team._id)) _rtmByTeam.set(team._id, new RTMClient(team.bot.access_token))
+  const rtm = getRTMForTeam(team._id)!
+
+  if (!rtm.connected) rtm.start()
+
+  return rtm
+}

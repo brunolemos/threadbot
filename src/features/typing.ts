@@ -1,9 +1,12 @@
-import appRTM from '../init/rtm'
+import { startRTMForTeam } from '../init/rtm'
+import { Team } from '../models/team'
 
-if (appRTM) {
-  console.debug('[TYPING] Listening to user_typing on main Slack workspace.')
+export function initTypeFeatureForTeam(team: Team) {
+  console.debug(`[TYPING] Listening to user_typing on team ${team._id}.`)
+  const rtm = startRTMForTeam(team)
 
-  appRTM.on('user_typing', ({ channel }) => {
-    appRTM!.sendTyping(channel)
+  rtm.off('user_typing')
+  rtm.on('user_typing', ({ channel }) => {
+    rtm!.sendTyping(channel)
   })
 }

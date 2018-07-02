@@ -2,8 +2,9 @@ import { WebAPICallResult } from '@slack/client'
 import { send } from 'micro'
 import { get } from 'microrouter'
 
+import { initTypeFeatureForTeam } from '../features/typing'
 import web, { slackClientId, slackClientSecret } from '../init/web'
-import Team from '../models/team'
+import { Team } from '../models/team'
 
 export default [
   get('/oauth', async (req, res) => {
@@ -43,7 +44,7 @@ export default [
     } = (response || {}) as WebAPICallResult & Record<string, any>
 
     try {
-      await Team.findByIdAndUpdate(
+      const team = await Team.findByIdAndUpdate(
         team_id,
         {
           access_token,
@@ -53,8 +54,9 @@ export default [
           bot: { _id: bot_user_id, access_token: bot_access_token },
           name: team_name,
         },
-        { upsert: true },
+        { new: true, upsert: true },
       )
+      initTypeFeatureForTeam(team.toObject())
     } catch (error) {
       console.error(error)
       send(res, 500, { ok: false, message: error.message })

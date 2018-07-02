@@ -7,7 +7,7 @@ Make people on Slack use threads instead of flooding the channels
 
 ### TODO
 
-- [x] Show `Thread Bot is typing` whenever someone types so the person remembers to use thread (only if you deploy this repo to your own server)
+- [x] Show `Thread Bot is typing` whenever someone types so the person remembers to use thread
 - [ ] ~Automatically unshare files from channels so comments don't flood the channel~<br/>
     - _Slack API doesn't allow bots do this 😕_
     - _This will be fixed: File comments will work just like threads after July 19th 🎉🎉 ([source](https://api.slack.com/changelog/2018-05-file-threads-soon-tread))_

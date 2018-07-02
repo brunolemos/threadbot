@@ -41,3 +41,7 @@ Remind everyone to always use thread when possible
 ### TODO
 
 - [ ] Automatically detect when too many messages as shared in a short time and trigger the thread reminder
+
+### Author
+
+Follow [@brunolemos](https://twitter.com/brunolemos) on Twitter

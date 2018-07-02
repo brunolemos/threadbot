@@ -15,7 +15,7 @@ export default [
       case 'start_thread': {
         await axios.post(payload.response_url, {
           response_type: 'in_channel',
-          text: `${userId ? `<@${userId}> ` : ''}Please use thread instead 🙌`,
+          text: '[THREAD] ⬇️',
           thread_ts: payload.message.ts,
         })
         break
@@ -24,7 +24,7 @@ export default [
       case 'use_thread': {
         await axios.post(payload.response_url, {
           response_type: 'in_channel',
-          text: '[THREAD] ⬇️',
+          text: `${userId ? `<@${userId}> ` : ''}Please use thread instead 🙌`,
           thread_ts: payload.message.ts,
         })
         break

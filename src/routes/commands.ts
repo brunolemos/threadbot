@@ -5,7 +5,7 @@ import { post } from 'microrouter'
 import { getParsedBody } from '../helpers'
 
 export default [
-  post('/commands/thread', async (req, res) => {
+  post('/commands/thread-reminder', async (req, res) => {
     const payload = await getParsedBody(req, res)
 
     await axios.post(payload.response_url, {

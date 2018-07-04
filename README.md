@@ -5,12 +5,17 @@ Make people on Slack use threads instead of flooding the channels
 
 ---
 
+### TODO
+
+- [ ] Automatically detect when too many messages as shared in a short time and trigger the thread reminder
+
 ### Features
 
-#### Thread Bot is typing
-Show `Thread Bot is typing` whenever someone types,<br/>
+#### ~Thread Bot is typing~
+_Disabled as requested by the Slack Team_<br/>
+~Show `Thread Bot is typing` whenever someone types,<br/>
 so the person remembers to use thread instead of flooding the channel.<br/>
-<img height="100" src="https://user-images.githubusercontent.com/619186/42146134-3c67cd30-7d9c-11e8-9586-05d2c91f0e91.png" />
+<img height="100" src="https://user-images.githubusercontent.com/619186/42146134-3c67cd30-7d9c-11e8-9586-05d2c91f0e91.png" />~
 
 <!--
 ### `/thread` command
@@ -37,10 +42,6 @@ Remind everyone to always use thread when possible
 ~Automatically unshare files from channels so comments don't flood the channel~<br/>
   - _Slack API doesn't allow bots do this 😕_
   - _This will soon be fixed: File comments will work just like threads after July 19th 🎉🎉 ([source](https://api.slack.com/changelog/2018-05-file-threads-soon-tread))_
-
-### TODO
-
-- [ ] Automatically detect when too many messages as shared in a short time and trigger the thread reminder
 
 ### Author
 

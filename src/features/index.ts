@@ -1,6 +1,7 @@
 import { Team } from '../models/team'
-import { initTypeFeatureForTeam } from './typing'
+// import { initTypeFeatureForTeam } from './typing'
 
 export async function initAllFeaturesForTeam(team: Team) {
-  await initTypeFeatureForTeam(team)
+  console.log('Init all features for team', team._id)
+  // await initTypeFeatureForTeam(team)
 }

@@ -30,9 +30,16 @@ Remind everyone to always use thread when possible
 
 #### Action buttons
 
+##### Start a thread
+
+<img height="200" src="https://user-images.githubusercontent.com/619186/42252412-e2d8fb0e-7f12-11e8-911a-ed6867c787a6.png" />
+
+<img height="100" src="https://user-images.githubusercontent.com/619186/42252377-adc70e24-7f12-11e8-9c0c-ae45ff27ce26.png" />
+
+
 ##### Ask to use thread
 
-<img height="150" src="https://user-images.githubusercontent.com/619186/42146178-8fad463c-7d9c-11e8-8e30-470baeb2c1a4.png"/>
+<img height="200" src="https://user-images.githubusercontent.com/619186/42252407-dbb4531e-7f12-11e8-9dc6-6b88dae43914.png" />
 
 <img height="300" src="https://user-images.githubusercontent.com/619186/42146263-17201748-7d9d-11e8-8dd6-ff0621fc72c8.png"/>
 

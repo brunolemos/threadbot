@@ -1,4 +1,4 @@
-import initAllFeaturesForTeam from '../features'
+import { initAllFeaturesForTeam } from '../features'
 import { Team } from '../models/team'
 
 export async function initAllFeatures() {

@@ -2,7 +2,7 @@ import { WebAPICallResult } from '@slack/client'
 import { send } from 'micro'
 import { get } from 'microrouter'
 
-import { initTypeFeatureForTeam } from '../features/typing'
+import { initAllFeaturesForTeam } from '../features'
 import web, { slackClientId, slackClientSecret } from '../init/web'
 import { Team } from '../models/team'
 
@@ -56,7 +56,7 @@ export default [
         },
         { new: true, upsert: true },
       )
-      initTypeFeatureForTeam(team.toObject())
+      initAllFeaturesForTeam(team.toObject())
     } catch (error) {
       console.error(error)
       send(res, 500, { ok: false, message: error.message })

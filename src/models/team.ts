@@ -4,7 +4,7 @@ import mongoose from '../init/mongoose'
 // https://github.com/kriasoft/react-starter-kit/issues/1418
 delete mongoose.connection.models.Team
 
-export interface Team {
+export interface Team extends mongoose.Document {
   _id: string
   access_token: string
   bot: { _id: string; access_token: string }
@@ -24,4 +24,4 @@ export const teamSchema = new mongoose.Schema({
   users: [String],
 } as Record<keyof Team, any>)
 
-export const Team = mongoose.model('Team', teamSchema)
+export const Team = mongoose.model<Team>('Team', teamSchema)

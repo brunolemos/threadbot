@@ -43,7 +43,11 @@ Remind everyone to always use thread when possible
 
 <img height="300" src="https://user-images.githubusercontent.com/619186/42146263-17201748-7d9d-11e8-8dd6-ff0621fc72c8.png"/>
 
+##### Add/remove the 👀 reaction
 
+This is a more fun and less intrusive way to remind someone about the Thread Culture.
+
+<img height="250" src="https://user-images.githubusercontent.com/619186/42253880-49cd381e-7f1a-11e8-961e-b17abb87f698.png" />
 
 #### ~Unshare files~
 ~Automatically unshare files from channels so comments don't flood the channel~<br/>

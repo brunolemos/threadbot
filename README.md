@@ -11,12 +11,13 @@ Make people on Slack use threads instead of flooding the channels
 
 ### Features
 
+<!--
 #### ~Thread Bot is typing~
 _Disabled as requested by the Slack Team_<br/>
 ~Show `Thread Bot is typing` whenever someone types,<br/>
 so the person remembers to use thread instead of flooding the channel.<br/>
 <img height="100" src="https://user-images.githubusercontent.com/619186/42146134-3c67cd30-7d9c-11e8-9586-05d2c91f0e91.png" />~
-
+-->
 <!--
 ### `/thread` command
 Start a new thread

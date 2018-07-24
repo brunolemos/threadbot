@@ -26,7 +26,7 @@ interface FloodControl {
 const floodControl: FloodControl = {}
 
 const mainThreadName = 'main'
-const floodSeconds = 20
+const floodSeconds = parseInt(process.env.FLOOD_CONTROL_SECONDS || '30', 10)
 
 export function initFloodFeature() {
   // noop

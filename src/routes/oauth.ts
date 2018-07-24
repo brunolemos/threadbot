@@ -23,9 +23,9 @@ export default [
     let response
     try {
       response = await web.oauth.access({
-        code,
         client_id: slackClientId,
         client_secret: slackClientSecret,
+        code,
       })
       if (!(response && response.ok)) throw new Error('Invalid response')
     } catch (error) {
@@ -47,12 +47,12 @@ export default [
       const team = await Team.findByIdAndUpdate(
         team_id,
         {
-          access_token,
-          scope,
           $addToSet: { users: user_id },
           _id: team_id,
+          access_token,
           bot: { _id: bot_user_id, access_token: bot_access_token },
           name: team_name,
+          scope,
         },
         { new: true, upsert: true },
       )

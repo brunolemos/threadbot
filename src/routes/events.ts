@@ -26,6 +26,12 @@ export default [
       return
     }
 
+    // disable flood control inside threads
+    if (event.thread_ts) {
+      send(res, 200)
+      return
+    }
+
     switch (event.type) {
       case 'message': {
         const userID = (event.comment && event.comment.user) || event.user

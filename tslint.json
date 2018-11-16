@@ -18,6 +18,7 @@
     "no-empty-interface": false,
     "object-literal-sort-keys": true,
     "object-shorthand-properties-first": false,
+    "prefer-template": false,
     "semicolon": false,
     "strict-boolean-expressions": false,
     "ter-arrow-parens": false,

@@ -52,10 +52,6 @@ This is a more fun and less intrusive way to remind someone about the Thread Cul
 
 <img height="250" src="https://user-images.githubusercontent.com/619186/42253880-49cd381e-7f1a-11e8-961e-b17abb87f698.png" />
 
-#### ~Unshare files~
-~Automatically unshare files from channels so comments don't flood the channel~<br/>
-  - _Slack API doesn't allow bots do this 😕_
-  - _This will soon be fixed: File comments will work just like threads after July 24th 🎉🎉 ([source](https://api.slack.com/changelog/2018-05-file-threads-soon-tread))_
 
 ### Author
 

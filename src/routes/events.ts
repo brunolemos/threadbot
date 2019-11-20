@@ -81,6 +81,7 @@ export default [
         }
 
         switch (event.subtype) {
+          case 'bot_message':
           case 'message_changed': {
             send(res, 200)
             return

@@ -24,7 +24,6 @@
     "deploy": "now",
     "dev": "npm run build && npm run watch-dev",
     "format": "prettier --write '{.,src/**}/*.{js,ts}'",
-    "postinstall": "npm run build",
     "precommit": "tsc && lint-staged",
     "serve": "micro -l tcp://0.0.0.0:$PORT dist/index.js",
     "serve-dev": "micro-dev dist/index.js",
@@ -77,5 +76,6 @@
       "tslint --fix",
       "git add"
     ]
-  }
+  },
+  "heroku-run-build-script": true
 }
